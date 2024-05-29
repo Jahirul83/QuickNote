@@ -2,13 +2,37 @@
 body{
     font-family: "Poppins", sans-serif;
     background: #3c78c7;
+    margin-top: 5%;
 }
 .container{
+    padding: 40px 20px 400px 20px;
     background-color: white;
-    width: 50%;
-    height: 5vmax;
+    width: 70%;
+    height: auto;
     margin: auto;
     justify-content: center;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.options{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    background: rgb(39, 176, 218);
+    border-radius: 6px;
+}
+.options > button {
+    font-weight: bolder;
+    border: solid 2px;
+    border-radius: 4px;
+    
+}
+.options > button:hover{
+    background-color: lightblue;
+   
+}
+.options span{
+    margin: 0px 5px;
 }
