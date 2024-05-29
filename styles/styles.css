@@ -3,3 +3,12 @@ body{
     font-family: "Poppins", sans-serif;
     background: #3c78c7;
 }
+.container{
+    background-color: white;
+    width: 50%;
+    height: 5vmax;
+    margin: auto;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
