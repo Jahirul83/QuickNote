@@ -5,7 +5,7 @@ body{
     margin-top: 5%;
 }
 .container{
-    padding: 40px 20px 400px 20px;
+    padding: 40px 20px 20px 20px;
     background-color: white;
     width: 70%;
     height: auto;
@@ -29,10 +29,23 @@ body{
     border-radius: 4px;
     
 }
+.options > select {
+    font-weight: bolder;
+    border: solid 2px;
+    border-radius: 4px;
+    
+}
 .options > button:hover{
     background-color: lightblue;
    
 }
 .options span{
     margin: 0px 5px;
+}
+#text-input{
+    margin-top: 6px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 20px;
+    height: 50vh;
 }
