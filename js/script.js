@@ -87,6 +87,20 @@ advOptionButtons.forEach((button) => {
 });
 
 
+// for creating link
+createLink.addEventListener("click",()=>{
+
+    let userLink = prompt("Enter url");
+    if(/http/i.test(userLink)){
+        modifyText(createLink.id,false,userLink);
+    }
+    else{
+        userLink = "http://" + userLink;
+        modifyText(createLink.id,false,userLink)
+    }
+
+});
+
 const highLighter = (className, needToRemove) => {
 
     className.forEach((button) => {
