@@ -26,3 +26,43 @@ let fontList = [
     "Courser",
     "cursive New",
 ];
+
+
+const initializer = () => {
+
+    highLighter(alignButtons, true);
+    highLighter(spacingButtons, true);
+    highLighter(formateButton, true);
+    highLighter(scriptButton, true);
+}
+
+
+const highLighter = (className, needToRemove) => {
+
+    className.forEach(button => {
+        button.addEventListener("click", () => {
+            if (needToRemove) {
+                let alreadyActive = false;
+            }
+            if (button.classList.contains("active")) {
+                alreadyActive = true;
+            }
+
+            highLighterRemover(className);
+            
+            if (!alreadyActive) {
+                button.classList.add("active");
+            }
+            else {
+                button.classList.toggle("active");
+            }
+        });
+    });
+
+};
+
+const highLighterRemover = (className) => {
+    className.forEach(button => {
+        button.classList.remove("active");
+    });
+}
