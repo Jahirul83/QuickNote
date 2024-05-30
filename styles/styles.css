@@ -52,3 +52,22 @@ body{
 .active{
     background-color: grey;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .options{
+        margin-top: 4px;
+    }
+    #text-input {
+        min-height: 200px;
+    }
+}
+@media (max-width: 480px) {
+    #text-input {
+        min-height: 250px;
+    }
+}
