@@ -1,8 +1,9 @@
 // script page
 let optionButton = document.querySelectorAll('.optionButtons');
-let advOptionButton = document.querySelectorAll('.advOptionButtons');
+let advOptionButtons = document.querySelectorAll('.advOptionButtons');
 let fontName = document.getElementById('fontName');
 let fontSize = document.getElementById('fontSize');
+// console.log(fontName);
 
 let textInput = document.getElementById('text-input');
 
@@ -27,6 +28,7 @@ let fontList = [
     "cursive New",
 ];
 
+// console.log(fontList);
 
 const initializer = () => {
 
@@ -34,6 +36,14 @@ const initializer = () => {
     highLighter(spacingButtons, true);
     highLighter(formateButton, true);
     highLighter(scriptButton, true);
+
+    fontList.map((value) => {
+        let option = document.createElement("option");
+        option.value = value;
+        option.innerHTML = value;
+        fontName.appendChild(option);
+
+    });
 }
 
 
@@ -49,7 +59,7 @@ const highLighter = (className, needToRemove) => {
             }
 
             highLighterRemover(className);
-            
+
             if (!alreadyActive) {
                 button.classList.add("active");
             }
@@ -66,3 +76,5 @@ const highLighterRemover = (className) => {
         button.classList.remove("active");
     });
 }
+
+window.onload = initializer();
