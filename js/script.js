@@ -93,9 +93,19 @@ advOptionButtons.forEach((button) => {
 // aline
 alignButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        modifyText(button.id, false, button.value);
+        modifyText(button.id, false,null);
     })
 });
+
+// spacing
+spacingButtons.forEach((button)=>{
+    button.addEventListener("click",()=>{
+        modifyText(button.id,false,null);
+    })
+
+});
+
+
 
 
 // for creating link
