@@ -25,22 +25,22 @@
     <div class="container">
         <!-- buttons -->
         <div class="options">
-            <button>
+            <button id="bold" class="formate">
                 <i class="fa-solid fa-b"></i>
             </button>
-            <button>
+            <button id="italic" class="formate">
                 <i class="fa-solid fa-italic"></i>
             </button>
-            <button>
+            <button id="underline" class="formate">
                 <i class="fa-solid fa-underline"></i>
             </button>
-            <button>
+            <button id="strikethrough" class="formate">
                 <i class="fa-solid fa-strikethrough"></i>
             </button>
-            <button>
+            <button id="fa-superScript" class="script">
                 <i class="fa-solid fa-superscript"></i>
             </button>
-            <button>
+            <button id="subScript" class="script">
                 <i class="fa-solid fa-subscript"></i>
             </button>
 
@@ -56,45 +56,45 @@
 
             <!-- undo redo-->
             <span>|</span>
-            <button>
+            <button id="undo" class="optionButtons">
                 <i class="fa-solid fa-rotate-left"></i>
             </button>
-            <button>
+            <button id="redo" class="optionButtons">
                 <i class="fa-solid fa-rotate-right"></i>
             </button>
 
             <!-- link-->
             <span>|</span>
-            <button>
+            <button id="createLink" class="advOptionButtons">
                 <i class="fa-solid fa-link"></i>
             </button>
-            <button>
+            <button id="unLink" class="advOptionButtons">
                 <i class="fa-solid fa-link-slash"></i>
             </button>
 
 
             <!-- align-->
             <span>|</span>
-            <button>
+            <button id="justifyLeft" class="align">
                 <i class="fa-solid fa-align-left"></i>
             </button>
-            <button>
+            <button id="justifyCenter" class="align">
                 <i class="fa-solid fa-align-center"></i>
             </button>
-            <button>
+            <button id="justifyRight" class="align">
                 <i class="fa-solid fa-align-right"></i>
             </button>
-            <button>
+            <button id="justify" class="align">
                 <i class="fa-solid fa-align-justify"></i>
             </button>
 
 
             <!-- indent outdent-->
             <span>|</span>
-            <button>
+            <button id="indent" class="spacing">
                 <i class="fa-solid fa-indent"></i>
             </button>
-            <button>
+            <button id="outdent" class="spacing">
                 <i class="fa-solid fa-outdent"></i>
             </button>
 
@@ -109,9 +109,9 @@
             </select>
 
             <!-- fonts -->
-            <select>  
+            <select id="fontName">  
             </select>
-            <select>   
+            <select id="fontSize">   
             </select>
 
             <!-- color -->
@@ -129,6 +129,9 @@
 
         </div>
     </div>
+
+    <!-- script -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
