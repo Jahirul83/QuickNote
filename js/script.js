@@ -1,6 +1,8 @@
 // script page
 let optionButton = document.querySelectorAll('.optionButtons');
 let advOptionButtons = document.querySelectorAll('.advOptionButtons');
+
+console.log(advOptionButtons);
 let fontName = document.getElementById('fontName');
 let fontSize = document.getElementById('fontSize');
 // console.log(fontName);
@@ -13,9 +15,9 @@ let alignButtons = document.querySelectorAll('.align');
 
 let spacingButtons = document.querySelectorAll('.spacing');
 
-let formateButton = document.querySelectorAll(".formate");
+let formatButtons = document.querySelectorAll(".format");
 
-let scriptButton = document.querySelectorAll(".script");
+let scriptButtons = document.querySelectorAll(".script");
 
 // fontLint
 let fontList = [
@@ -34,34 +36,73 @@ const initializer = () => {
 
     highLighter(alignButtons, true);
     highLighter(spacingButtons, true);
-    highLighter(formateButton, true);
-    highLighter(scriptButton, true);
+    highLighter(formatButtons, false);
+    highLighter(scriptButtons, true);
 
+    // font list
     fontList.map((value) => {
         let option = document.createElement("option");
         option.value = value;
         option.innerHTML = value;
         fontName.appendChild(option);
 
+        // console.log(option);
+
     });
+
+    // font Size
+    for (let i = 1; i <= 7; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.innerHTML = i;
+        fontSize.appendChild(option);
+
+        // console.log(option);
+    }
+
+    // default size 3
+    fontSize.value = 3;
+};
+
+
+
+const modifyText = (command, defaultUi, value) => {
+
+    // execCommand executes command on selected text
+    document.execCommand(command, defaultUi, value);
+    // console.log("click");
 }
+
+optionButton.forEach(button => {
+    // console.log(button);
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, null);
+    });
+});
+// advance option for button like color, fonts etc
+advOptionButtons.forEach((button) => {
+    button.addEventListener("change", () => {
+        modifyText(button.id, false, button.value);
+    })
+});
 
 
 const highLighter = (className, needToRemove) => {
 
-    className.forEach(button => {
+    className.forEach((button) => {
         button.addEventListener("click", () => {
             if (needToRemove) {
                 let alreadyActive = false;
-            }
-            if (button.classList.contains("active")) {
-                alreadyActive = true;
-            }
 
-            highLighterRemover(className);
+                if (button.classList.contains("active")) {
+                    alreadyActive = true;
+                }
 
-            if (!alreadyActive) {
-                button.classList.add("active");
+                highLighterRemover(className);
+
+                if (!alreadyActive) {
+                    button.classList.add("active");
+                }
             }
             else {
                 button.classList.toggle("active");
