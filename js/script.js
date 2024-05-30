@@ -19,6 +19,10 @@ let formatButtons = document.querySelectorAll(".format");
 
 let scriptButtons = document.querySelectorAll(".script");
 
+
+
+let headingSelect = document.getElementById("headingSelect")
+
 // fontLint
 let fontList = [
     "Arial",
@@ -86,6 +90,13 @@ advOptionButtons.forEach((button) => {
     })
 });
 
+// aline
+alignButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, button.value);
+    })
+});
+
 
 // for creating link
 createLink.addEventListener("click",()=>{
@@ -100,6 +111,14 @@ createLink.addEventListener("click",()=>{
     }
 
 });
+
+
+
+// heading select
+headingSelect.addEventListener("change",()=>{
+    let heading = headingSelect.value;
+    modifyText('formatBlock',false,heading);
+})
 
 const highLighter = (className, needToRemove) => {
 
