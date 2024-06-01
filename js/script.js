@@ -15,6 +15,8 @@ let alignButtons = document.querySelectorAll('.align');
 
 let spacingButtons = document.querySelectorAll('.spacing');
 
+let listButtons = document.querySelectorAll('.listButtons');
+
 let formatButtons = document.querySelectorAll(".format");
 
 let scriptButtons = document.querySelectorAll(".script");
@@ -99,6 +101,13 @@ alignButtons.forEach((button) => {
 
 // spacing
 spacingButtons.forEach((button)=>{
+    button.addEventListener("click",()=>{
+        modifyText(button.id,false,null);
+    })
+
+});
+// list
+listButtons.forEach((button)=>{
     button.addEventListener("click",()=>{
         modifyText(button.id,false,null);
     })
