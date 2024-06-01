@@ -92,6 +92,12 @@ advOptionButtons.forEach((button) => {
     })
 });
 
+// script
+scriptButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false,null);
+    })
+});
 // aline
 alignButtons.forEach((button) => {
     button.addEventListener("click", () => {
